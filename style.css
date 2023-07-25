@@ -1,0 +1,101 @@
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+  }
+  
+  .wrapper {
+    @include flexbox();
+  }
+  
+  .item {
+    @include flex(1 200px);
+    @include order(2);
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: auto;
+    max-width: 75%;
+    min-width: 200px;
+    margin: 10px auto;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+
+
+    /* height: auto;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black; */
+}
+
+
+
+.sketch-container {
+    display: flex;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 75%;
+    background-color: pink;
+    padding: 20px;
+    margin: 10px;
+
+    /* display: flex;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline; */
+}
+
+.sketch-container * {
+    height: 400px;
+    margin: auto;
+    border: 2px red dashed;
+}
+
+.sketch-container .sketch {
+    display: flex;
+    flex-flow: row wrap;
+    width: 400px;
+    border-color: blue;
+}
+
+.sketch-container .controls {
+    width: 200px;
+}
