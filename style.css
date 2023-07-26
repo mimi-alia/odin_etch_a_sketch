@@ -92,6 +92,8 @@ html, body {
 .sketch-container .sketch {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 400px;
     border-color: blue;
 }

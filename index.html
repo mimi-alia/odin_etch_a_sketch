@@ -15,7 +15,15 @@
         </div>
     </div>
     <script>
-        
+        let sketchField = document.querySelector('.sketch');
+        const sketchPixels = document.createDocumentFragment();
+        for (let i = 0; i<32;i++){
+            let div = document.createElement('div');
+            div.className = 'pixel';
+            sketchField.appendChild(div);
+        }
+
+        sketchField.appendChild(sketchPixels)
 
     </script>
 </body>
