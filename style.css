@@ -89,7 +89,7 @@ html, body {
     border: 2px red dashed;
 }
 
-.sketch-container .sketch {
+.sketch-container .sketch-field {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -101,3 +101,16 @@ html, body {
 .sketch-container .controls {
     width: 200px;
 }
+
+.sketch-field {
+  display: flex;
+  flex-direction: row wrap;
+}
+
+.sketch-field .pixel {
+  border: 1px green solid;
+  flex: 1 1 auto;
+  margin: 0;
+  height: 6.25%;
+  width: 6.25%; 
+} 

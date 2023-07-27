@@ -11,13 +11,13 @@
         <h1>Etch a Sketch!</h1>
         <div class="sketch-container">
             <fieldset class="controls"></fieldset>
-            <div class="sketch"></div>
+            <div class="sketch-field"></div>
         </div>
     </div>
     <script>
-        let sketchField = document.querySelector('.sketch');
+        let sketchField = document.querySelector('.sketch-field');
         const sketchPixels = document.createDocumentFragment();
-        for (let i = 0; i<32;i++){
+        for (let i = 0; i<256;i++){
             let div = document.createElement('div');
             div.className = 'pixel';
             sketchPixels.appendChild(div);
