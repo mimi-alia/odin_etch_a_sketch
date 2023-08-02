@@ -108,7 +108,8 @@ html, body {
 }
 
 .sketch-field .pixel {
-  border: 1px green solid;
+  border: 0;
+  /* border: 1px green solid; */
   flex: 1 1 auto;
   margin: 0;
   height: 6.25%;

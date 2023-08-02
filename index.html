@@ -25,6 +25,26 @@
 
         sketchField.appendChild(sketchPixels);
 
+        let isDrawing = false;
+
+        sketchField.addEventListener('mousedown', (event) => {
+            isDrawing = true;
+            event.target.style.backgroundColor = 'black'
+        })
+        
+        sketchField.addEventListener('mousemove', (event) => {
+            if(isDrawing){
+                event.target.style.backgroundColor = 'black';
+            }
+        })
+
+        sketchField.addEventListener('mouseup', (event) => {
+            if(isDrawing){
+                isDrawing = false;
+            }
+        })
+
+
     </script>
 </body>
 </html>
